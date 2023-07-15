@@ -3,8 +3,8 @@ import React, {useState} from "react";
 const NewBoxForm = ({addBox}) => {
     const INITIAL_STATE = {
         backgroundColor : "",
-        height : 0,
-        width : 0,
+        height : "",
+        width : "",
     }
 
     const [formData, setFormData] = useState ( INITIAL_STATE );
@@ -26,33 +26,41 @@ const NewBoxForm = ({addBox}) => {
     return (
     <div>
         <form onSubmit={handleSubmit}>
-            <label htmlFor='backgroundColor'>BackgroundColor:</label>
-            <input 
-                type="text" 
-                name="backgroundColor"
-                placeholder="backgroundColor"
-                id="backgroundColor"
-                value={formData.backgroundColor}
-                onChange={handleChange}
-            ></input>
-            <label htmlFor='width'>Width:</label>
-            <input 
-                type="Number" 
-                name="width"
-                placeholder="width"
-                id="width"
-                value={formData.width}
-                onChange={handleChange}
-            ></input>
-            <label htmlFor='height'>Height:</label>
-            <input 
-                type="Number" 
-                name="height"
-                placeholder="height"
-                id="height"
-                value={formData.height}
-                onChange={handleChange}
-            ></input>
+            <div>
+                <label htmlFor='backgroundColor'>BackgroundColor:</label>
+                <input 
+                    type="text" 
+                    name="backgroundColor"
+                    placeholder="backgroundColor"
+                    id="backgroundColor"
+                    value={formData.backgroundColor}
+                    onChange={handleChange}
+                />
+            </div>
+
+            <div>
+                <label htmlFor='width'>Width:</label>
+                <input 
+                    type="Number" 
+                    name="width"
+                    placeholder="width"
+                    id="width"
+                    value={formData.width}
+                    onChange={handleChange}
+                />
+            </div>
+
+            <div>
+                <label htmlFor='height'>Height:</label>
+                <input 
+                    type="Number" 
+                    name="height"
+                    placeholder="height"
+                    id="height"
+                    value={formData.height}
+                    onChange={handleChange}
+                />
+            </div>
 
             <button>Add</button>
         </form>

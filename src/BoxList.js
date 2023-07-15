@@ -16,7 +16,7 @@ const BoxList = () => {
         height: 60
     }]
 
-    const [boxes, setBoxes] = useState(initialBoxes);
+    const [boxes, setBoxes] = useState([]);
 
     const addBox = (box) => {
         let newBox = { ...box, id:uuid() };
@@ -40,7 +40,7 @@ const BoxList = () => {
                     deleteBox={deleteBox}
                 />
             ))}
-            <NewBoxForm addBox={addBox}/>
+            {<NewBoxForm addBox={addBox}/>}
         </div>
     )
 }

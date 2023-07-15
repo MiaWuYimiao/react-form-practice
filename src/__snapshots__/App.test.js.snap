@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crash 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div>
+      <div>
+        laundary
+        <button>
+          X
+        </button>
+      </div>
+      <div>
+        send an email
+        <button>
+          X
+        </button>
+      </div>
+      <form>
+        <label
+          for="task"
+        >
+          Task: 
+        </label>
+        <input
+          id="task"
+          name="task"
+          placeholder="task"
+          type="text"
+          value=""
+        />
+        <button>
+          Add Todo
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
